@@ -1,0 +1,11 @@
+{
+    "name": "kgaut/ckeditor_source_plugin",
+    "description": "This module provide a CKeditor plugin which allows the user to add sources links and title within the editor",
+    "require": {
+    	"composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "ckeditor_source_plugin"
+    },
+    "type":"drupal-module"
+}
