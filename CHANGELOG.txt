@@ -1,0 +1,3 @@
+CKeditor Source Plugin 7.x-1.0alpha1, xxxx-xx-xx
+--------------------------
+- Create module

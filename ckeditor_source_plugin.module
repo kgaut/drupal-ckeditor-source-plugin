@@ -5,7 +5,7 @@
  */
 
 /**
- * Define the CKEditor plugin.
+ * Define the CKEditor plugin. *
  * Implements hook_ckeditor_plugin().
  *
  * @return array
@@ -18,7 +18,7 @@ function ckeditor_source_plugin_ckeditor_plugin() {
       'desc' => t('CKEditor Source Plugin : Allow to source facts'),
       'path' => drupal_get_path('module', 'ckeditor_source_plugin') . '/source/',
       'buttons' => array(
-        'responsivness' => array(
+        'source' => array(
           'icon' => 'images/source.png',
           'label' => t('Add source'),
         ),
