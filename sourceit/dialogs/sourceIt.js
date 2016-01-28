@@ -39,7 +39,6 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
       else {
         markup = '<a href="#" title="'+source_title+'" class="wysiwyg_source">?</a>';
       }
-      console.log(markup);
       editor.insertHtml(markup);
     }
   };
