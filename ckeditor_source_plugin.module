@@ -38,9 +38,9 @@ function ckeditor_source_plugin_ckeditor_plugin() {
  */
 function ckeditor_source_plugin_ckeditor_settings_alter(array &$settings, array $conf) {
   if (isset($settings['js_conf']['extraAllowedContent'])) {
-    $settings['js_conf']['extraAllowedContent'] .= "'a(*);span(*);'";
+    $settings['js_conf']['extraAllowedContent'] .= "'a(*);'";
   }
   else {
-    $settings['js_conf']['extraAllowedContent'] = "'a(*);span(*);'";
+    $settings['js_conf']['extraAllowedContent'] = "'a(*);'";
   }
 }
