@@ -34,7 +34,7 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
       var source_url = dialog.getValueOf('tab-basic', 'source_url');
       var markup = '';
       if (source_url.trim() !== "") {
-        markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source">?</a>';
+        markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source" target="_blank">?</a>';
       }
       else {
         markup = '<a href="#" title="'+source_title+'" class="wysiwyg_source">?</a>';
