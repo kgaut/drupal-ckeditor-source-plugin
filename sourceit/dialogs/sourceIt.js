@@ -6,7 +6,7 @@
 CKEDITOR.dialog.add('sourceIt', function (editor) {
   'use strict';
   return {
-    title: 'Add a source',
+    title: 'Add a sourceit',
     minWidth: 400,
     minHeight: 200,
     contents: [
@@ -18,14 +18,14 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
             type: 'text',
             id: 'source_title',
             label: 'Title',
-            validate: CKEDITOR.dialog.validate.notEmpty( "The source title cannot be empty." ),
+            validate: CKEDITOR.dialog.validate.notEmpty( "The sourceit title cannot be empty." )
           },
           {
             type: 'text',
             id: 'source_url',
             label: 'Source URL',
-            validate: CKEDITOR.dialog.validate.notEmpty( "The source title cannot be empty." ),
-          },
+            validate: CKEDITOR.dialog.validate.notEmpty( "The sourceit title cannot be empty." )
+          }
         ]
       }
     ],
@@ -33,11 +33,12 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
       var dialog = this;
       var source_title = dialog.getValueOf('tab-basic', 'source_title');
       var source_url = dialog.getValueOf('tab-basic', 'source_url');
+      var markup = '';
       if (source_url.trim() !== "") {
-        var markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source"></a>';
+        markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source"></a>';
       }
       else {
-        var markup = '<span title="'+source_title+'" class="wysiwyg_source"></span>';
+        markup = '<span title="'+source_title+'" class="wysiwyg_source"></span>';
       }
       editor.insertHtml(markup);
     }

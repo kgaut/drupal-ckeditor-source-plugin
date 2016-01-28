@@ -13,17 +13,34 @@
  */
 function ckeditor_source_plugin_ckeditor_plugin() {
   return array(
-    'source' => array(
-      'name' => 'Source',
-      'desc' => t('CKEditor Source Plugin : Allow to source facts'),
-      'path' => drupal_get_path('module', 'ckeditor_source_plugin') . '/source/',
+    'sourceit' => array(
+      'name' => 'sourceit',
+      'desc' => t('CKEditor Source it Plugin : Allow to source facts'),
+      'path' => drupal_get_path('module', 'ckeditor_source_plugin') . '/sourceit/',
       'buttons' => array(
-        'source' => array(
-          'icon' => 'images/source.png',
-          'label' => t('Add source'),
+        'sourceit' => array(
+          'icon' => 'images/sourceit.png',
+          'label' => t('Add a source'),
         ),
       ),
-      'default' => 't',
     ),
   );
+}
+
+/**
+ * Extend CKEditor's settings.
+ * Implements hook_ckeditor_settings_alter().
+ *
+ * @param array $settings
+ *   CKEditor base settings.
+ * @param array $conf
+ *   CKEditor configuration.
+ */
+function ckeditor_source_plugin_ckeditor_settings_alter(array &$settings, array $conf) {
+  if (isset($settings['js_conf']['extraAllowedContent'])) {
+    $settings['js_conf']['extraAllowedContent'] .= "'a(*);'";
+  }
+  else {
+    $settings['js_conf']['extraAllowedContent'] = "'a(*);'";
+  }
 }
