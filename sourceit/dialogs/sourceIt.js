@@ -23,8 +23,7 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
           {
             type: 'text',
             id: 'source_url',
-            label: 'Source URL',
-            validate: CKEDITOR.dialog.validate.notEmpty( "The sourceit title cannot be empty." )
+            label: 'Source URL'
           }
         ]
       }
@@ -35,11 +34,12 @@ CKEDITOR.dialog.add('sourceIt', function (editor) {
       var source_url = dialog.getValueOf('tab-basic', 'source_url');
       var markup = '';
       if (source_url.trim() !== "") {
-        markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source"></a>';
+        markup = '<a href="'+source_url+'" title="'+source_title+'" class="wysiwyg_source">?</a>';
       }
       else {
-        markup = '<span title="'+source_title+'" class="wysiwyg_source"></span>';
+        markup = '<a href="#" title="'+source_title+'" class="wysiwyg_source">?</a>';
       }
+      console.log(markup);
       editor.insertHtml(markup);
     }
   };
