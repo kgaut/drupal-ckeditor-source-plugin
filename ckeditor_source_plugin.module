@@ -5,8 +5,8 @@
  */
 
 /**
- * Define the CKEditor plugin. *
  * Implements hook_ckeditor_plugin().
+ * Define the CKEditor plugin.
  *
  * @return array
  *   CKEditor settings.
@@ -28,8 +28,8 @@ function ckeditor_source_plugin_ckeditor_plugin() {
 }
 
 /**
- * Extend CKEditor's settings.
  * Implements hook_ckeditor_settings_alter().
+ * Extend CKEditor's settings.
  *
  * @param array $settings
  *   CKEditor base settings.

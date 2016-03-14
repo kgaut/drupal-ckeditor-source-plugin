@@ -5,8 +5,8 @@
  */
 
 /**
- * Display a message after the module installation.
  * Implements hook_enable().
+ * Display a message after the module installation.
  */
 function ckeditor_source_plugin_enable() {
   drupal_set_message(t('The CKEditor Source Plugin is now enable, please add the
